@@ -1,21 +1,17 @@
-@extends('layouts.fontendApp')
+@extends('layouts.adminApp')
 
- @section('content')
-<div class="breadcrumb">
-	<div class="container">
-		<div class="breadcrumb-inner">
-			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">Home</a></li>
-				<li class='active'>Login</li>
-			</ul>
-		</div>
-		<!-- /.breadcrumb-inner -->
-	</div>
-	<!-- /.container -->
-</div>
-<!-- /.breadcrumb -->
-<div class="body-content ">
-	<div class="container">
+@section('adminContent')
+
+<div class="sl-mainpanel">
+      <nav class="breadcrumb sl-breadcrumb">
+        <a class="breadcrumb-item" href="index.html">Admin</a>
+        <span class="breadcrumb-item active">Profile</span>
+      </nav>
+
+      <div class="sl-pagebody">
+
+        <div class="row row-sm">
+          <div class="container">
 		
        
         <div class="row justify-content-center">
@@ -26,7 +22,7 @@
             <div class="card">
                 <h3 class="text-center"><span class="text-danger">Hi...!</span> <strong class="text-warning">{{Auth::user()->name}}</strong> Update Your Profile</h3>
             <div class="card-body" >
-                <form action="{{ route('user.update')}}" method="Post">
+                <form action="{{ route('profile.update')}}" method="Post">
                     @csrf
                     <div class="form-group row">
                         <label for="colFormLabelLg" class="col-md-2 col-form-label col-form-label-lg">Name</label>
@@ -72,17 +68,13 @@
 
 		
 	</div>
-	<!-- /.container -->
-</div>
-<!-- /.body-content -->
+        </div><!-- row -->
+
+     
+
+      </div><!-- sl-pagebody -->
+
+    </div><!-- sl-mainpanel -->
+
 @endsection
-
-
-
-
-
-
-
-
-
 

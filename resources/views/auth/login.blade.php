@@ -24,6 +24,7 @@
 					<div class="social-sign-in outer-top-xs">	<a href="#" class="facebook-sign-in"><i class="fa fa-facebook"></i> Sign In with Facebook</a>
 						<a href="#" class="twitter-sign-in"><i class="fa fa-twitter"></i> Sign In with Twitter</a>
 					</div>
+					
 					<form class="register-form outer-top-xs" role="form" method="POST" action="{{ route('login') }}">@csrf
 						<div class="form-group">
 							<label class="info-title" for="exampleInputEmail1">Email Address <span>*</span>

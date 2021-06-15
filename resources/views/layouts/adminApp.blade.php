@@ -13,6 +13,8 @@
     <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="twitter:image" content="http://themepixels.me/starlight/img/starlight-social.png">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
     <!-- Facebook -->
     <meta property="og:url" content="http://themepixels.me/starlight">
     <meta property="og:title" content="Starlight">
@@ -70,5 +72,36 @@
     <script src="{{asset('backend')}}/js/starlight.js"></script>
     <script src="{{asset('backend')}}/js/ResizeSensor.js"></script>
     <script src="{{asset('backend')}}/js/dashboard.js"></scrip{{asset('backend')}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
+    <script>
+
+    @if(Session::has('message'))
+    var type = "{{Session::get('alert-type','info')}}"
+    switch(type){
+        case 'info':
+        toastr.info("{{ Session::get('message')}}");
+        break;
+
+        case 'info':
+        toastr.info("{{ Session::get('message')}}");
+        break;
+
+        case 'success':
+        toastr.success("{{ Session::get('message')}}");
+        break;
+
+        case 'warning':
+        toastr.warning("{{ Session::get('message')}}");
+        break;
+
+        case 'error':
+        toastr.error("{{ Session::get('message')}}");
+        break;
+    }
+    @endif
+</script>
+
   </body>
 </html>

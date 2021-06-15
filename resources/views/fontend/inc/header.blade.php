@@ -27,7 +27,7 @@
 
 		
 
-		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
 		<!-- Icons/Glyphs -->
 		<link rel="stylesheet" href="{{asset('fontend')}}/assets/css/font-awesome.css">
 
@@ -61,9 +61,9 @@
 							<a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"><i class="icon ion-power"></i> Sign Out</a>
                                                      
-                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                           </form>
 										</li>
 									@else
 									<li><a href="#"><i class="icon fa fa-lock"></i>Login</a></li>
